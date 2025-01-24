@@ -15,6 +15,10 @@ button {
     border: none;
 }
 
+.header-logo p {
+    color: #3F5A72;
+}
+
 .sidebar {
     z-index: 999;
     display: flex;
