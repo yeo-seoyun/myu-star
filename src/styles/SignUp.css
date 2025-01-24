@@ -1,0 +1,92 @@
+.signup-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+}
+
+.signup-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 20px;
+}
+
+.signup-name,
+.signup-email,
+.signup-phone,
+.signup-pw,
+.signup-confirm {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.signup-name label,
+.signup-confirm label,
+.signup-phone label,
+.signup-pw label,
+.signup-confirm label {
+    color: #3F5A72;
+}
+.signup-name input,
+.signup-email input,
+.signup-phone input,
+.signup-pw input,
+.signup-confirm input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+.singup-submit {
+    color: #fff;
+    background-color: #3F5A72;
+    width: 290px;
+    height: 45px;
+    border-radius: 50px;
+}
+.singup-submit:hover {
+    background-color: #3A4A5F; 
+}
+
+.agreement-form {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.agreement-form ul {
+    padding-left: 0;
+}
+.agreement-form ul li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.agreement-form ul li span {
+    color: #3F5A72;    
+}
+
+.agreement-view {
+    font-size: 10px;
+    border: 1px solid #3F5A72;
+    border-radius: 2px;
+    padding: 4px 6px;
+    margin-left: 15px;;
+    transition: all 0.1s ease;
+}
+.agreement-view:hover {
+    color: #fff;
+    background-color: #3F5A72;
+}

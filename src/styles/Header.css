@@ -1,11 +1,13 @@
 .header {
     width: 100%;
     height: 56px;
+    flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
     border-bottom: 1px solid #eee;
+    user-select: none;
 }
 
 button {
@@ -22,11 +24,11 @@ button {
     right: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFF8E7;
+    background-color: #FFF;
     transition: transform 0.3s ease;
   }
   
-  .close_button {
+  .close-button {
     align-self: flex-end;
     background: none;
     border: none;
@@ -40,15 +42,18 @@ button {
   
   .sidebar ul li {
     margin: 8px 0;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     padding: 8px 0;
   }
+  .sidebar ul li:hover {
+    background-color: #eee;
+  }
 
-  .hide_menu {
+  .hide-menu {
     transform: translateX(100%);
   }
   
-  .show_menu {
+  .show-menu {
     transform: translateX(0);
   }

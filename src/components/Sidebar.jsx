@@ -1,4 +1,5 @@
 //import { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 import '../styles/Header.css'
 import { FaXmark } from "react-icons/fa6";
@@ -6,12 +7,12 @@ import { FaXmark } from "react-icons/fa6";
 function Sidebar({ isMenuOpen, toggleMenu }) {
 
     return (
-        <div className={isMenuOpen ? 'sidebar show_menu' : 'sidebar hide_menu'}>
-            <button onClick={toggleMenu} className="close_button">
+        <div className={isMenuOpen ? 'sidebar show-menu' : 'sidebar hide-menu'}>
+            <button onClick={toggleMenu} className="close-button">
                 <FaXmark />
             </button>
             <ul>
-                <li>Home</li>
+                <li><Link to="/Home" onClick={toggleMenu}>Home</Link></li>
                 <li>내정보</li>
                 <li>Diary</li>
                 <li>D-day</li>

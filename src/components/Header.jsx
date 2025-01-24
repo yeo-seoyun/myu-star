@@ -1,6 +1,6 @@
 //import React from "react";
 //import { Link } from 'react-router-dom'
-// import { useNavigate, useLocation  } from 'react-router-dom';
+import { useLocation, useNavigate  } from 'react-router-dom';
 import { useState } from 'react'
 import Sidebar from './Sidebar';
 
@@ -10,25 +10,41 @@ import { FaBars } from "react-icons/fa6";
 
 function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
 
+    const goBack = () => {
+        navigate(-1);
+    };
+
+    const showBackButton = window.history.length > 1;
+
+    const disableSidebar = ["/SignUp", "/Login"];
+    const isSidebarDisabled = disableSidebar.includes(location.pathname);
+
     return (
         <header className="header">
-            <div className="history_back">
-                {/* 뒤로가기 구현 */}
-                <button className="">
-                    <FaAngleLeft />
-                </button>
+            {showBackButton && (
+                <div onClick={ goBack } className="history-back">
+                    <button className="">
+                        <FaAngleLeft />
+                    </button>
+                </div>
+            )}
+
+            <div className="header-logo">
+                <p>MyU Star</p>
             </div>
 
-            <div className="header_logo">
-                {/* 로고 추가 */}
-            </div>
-
-            <div className="menu_button">
-                <button onClick={ toggleMenu }>
+            <div className="menu-button">
+            <button 
+                    onClick={!isSidebarDisabled ? toggleMenu : undefined} 
+                    disabled={isSidebarDisabled}
+                >
                     <FaBars />
                 </button>
             </div>
