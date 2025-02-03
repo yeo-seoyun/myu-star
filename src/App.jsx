@@ -10,9 +10,10 @@ import './App.css'
 
 function AppContent() {
   const location = useLocation(); 
+  const isLandingPage = location.pathname === "/"
 
   return (
-    <div className="app">
+    <div className={isLandingPage ? "landing-root" : "app"}>
       {location.pathname !== '/' && <Header />}
 
       <main>
